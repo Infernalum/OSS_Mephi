@@ -1,0 +1,16 @@
+   72  cd OSS_Mephi
+   74  rm lab1.txt
+   75  git add .
+   76  git commit -m "Checking"
+   77   git push origin main
+   78  chmod 0755 commit.sh
+   79  ls
+   80  ./commit.sh checking
+   81  ./commit.sh
+   82  cat commit.sh
+   83  whoami
+   84  echo "Hello World"
+   85  date
+   86  cal
+   87  man cal
+   88  cd Документы/OSS_Mephi
