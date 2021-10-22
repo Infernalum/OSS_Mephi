@@ -1,0 +1,12 @@
+.:
+итого 12
+drw-rw-r-- 2 vladislav vladislav 4096 окт 22 15:41 dir
+-rw-r----- 1 root      vladislav    9 окт 22 15:39 file
+-rw------- 1 vladislav vladislav    0 окт 22 15:45 file1
+-rw-rw-rw- 1 vladislav vladislav    0 окт 22 15:46 file2
+-rw-r--r-- 1 root      root         0 окт 22 16:04 lab2_ls_sudo.txt
+-rw-r--r-- 1 vladislav vladislav  381 окт 22 16:04 lab2_ls.txt
+
+./dir:
+итого 0
+-rw-r--r-- 1 vladislav vladislav 0 окт 22 15:41 new_file
