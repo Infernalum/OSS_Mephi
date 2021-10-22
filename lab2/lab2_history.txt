@@ -1,0 +1,31 @@
+  253  cd /home/vladislav/
+  254  mkdir test
+  255  cd test/
+  256  touch file
+  259  chmod 000 file
+  262  chmod 200 file
+  263  echo "тест" > file
+  265  chmod 240 file
+  268  chmod 640 file
+  269  ls -l file
+  271  mkdir dir && cd dir/ && touch new_file
+  272  cd ..
+  273  chmod 664 dir
+  274  cat dir/new_file
+  275  rmdir dir/new_file
+  276  chown root file
+  277  chgrp root file
+  278  umask 200
+  281  umask 066
+  282  rm -f file1
+  283  touch file1
+  284  ls -l file1
+  285  umask 000
+  286  touch file2
+  287  ls -l file2
+  288  su
+  289  cat file
+  290  cd ../Документы/OSS_Mephi/lab2/
+  291  ls -lR > lab2_ls.txt
+  292  ls history > lab2_history.txt
+  293  history 50 > lab2_history.txt
