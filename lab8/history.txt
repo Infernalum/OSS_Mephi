@@ -1,0 +1,14 @@
+   381  ldd /bin/login | grep pam
+   382  ls -l /lib64/libpam*
+   384  ls -l /lib64/security/
+   385  vi /etc/pam.d/system-auth
+   392  vi /etc/pam.d/su
+   393  sudo su
+   394  su -c "hostname mephi"
+   394  man pam_pwquality
+   396  passwd
+   397  man pam_limits
+   398  sudo yum install pam-devel
+   401  gcc lab8.c -o lab8 -lpam -lpam_misc
+   402  ./lab8
+   403  history > ./Documents/OSS_Mephi/lab8/history.txt
