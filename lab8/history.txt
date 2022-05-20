@@ -5,7 +5,7 @@
    392  vi /etc/pam.d/su
    393  sudo su
    394  su -c "hostname mephi"
-   394  man pam_pwquality
+   395  man pam_pwquality
    396  passwd
    397  man pam_limits
    398  sudo yum install pam-devel

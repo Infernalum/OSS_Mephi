@@ -2,9 +2,11 @@
 #include <security/pam_misc.h>
 #include <stdio.h>
 
-static struct pam_conv conv = {
+static struct pam_conv conv = 
+{
     misc_conv,
-    NULL};
+    NULL
+};
 
 int main(int argc, char *argv[])
 {
