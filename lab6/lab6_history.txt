@@ -1,0 +1,19 @@
+  265  ls -l /dev/sda{,[123]}
+  266  lsblk --list
+  267  cat /proc/diskstats
+  269  cat /proc/devices 
+  270  dd if=/dev/zero of=./fs.img bs=1M count=10
+  274  losetup --find --show ./fs.img
+  275  losetup --list
+  279  mkfs -t ext4 /dev/loop0
+  280  blkid /dev/loop0
+  281  mount /dev/loop0 /mnt
+  292  mount | grep /mnt
+  293  df -h /mnt
+  294  df -hi /mnt
+  295  umount /dev/loop0
+  296  man tune2fs
+  297  tune2fs -l /dev/loop0
+  301  losetup --detach /dev/loop0
+  302  losetup --list
+  303  history > ./Documents/OSS_Mephi/lab6/lab6_history.txt
