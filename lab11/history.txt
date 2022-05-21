@@ -1,0 +1,12 @@
+  619  uname -r
+  621  rpmdev-setuptree
+  622  yumdownloader --source kernel
+  623  rpm -i kernel-4.18.0-305.10.2.el7.src.rpm 
+  624  ls rpmbuild/SPECS/
+  625  ls rpmbuild/SOURCES/
+  626  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
+  627  ls ~/rpmbuild/SRPMS/
+  628  sudo yum-builddep ~/rpmbuild/SRPMS/kernel-4.18.0-305.10.2.el7.src.rpm
+  629  sudo rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
+  630  cd rpmbuild/BUILD/kernel*/linux*
+  631  history > ~/Documents/OSS_Mephi/lab11/history.txt

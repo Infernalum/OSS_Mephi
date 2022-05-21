@@ -1,0 +1,46 @@
+  631  ldd /bin/ls | grep selinux
+  632  ls -l /etc/selinux/
+  633  ls -l /etc/selinux/targeted/
+  634  id -Z
+  635  ls -Z /etc/passwd /etc/group /etc/shadow
+  636  ls -Z /etc/login.defs /etc/sudoers
+  637  ls -Z /usr/bin/passwd 
+  638  ls -Z /usr/sbin/useradd 
+  639  getfattr -n security.selinux /etc/passwd
+  642  ps Zaux
+  643  ls /proc/$$/attr
+  644  ps Z $(pgrep passwd)
+  645  netstat -tnlpZ
+  647  sestatus 
+  648  cat /sys/fs/selinux/enforce
+  649  vi /etc/selinux/config
+  650  setenforce 1
+  651  echo 1 > /sys/fs/selinux/enforce
+  652  cat /sys/fs/selinux/enforce
+  653  getsebool -a | grep httpd
+  654  seinfo
+  661  seinfo -cfile -x 
+  662  seinfo --class | grep file
+  663  seinfo --class file -x
+  664  seinfo --common file -x
+  665  seinfo --commonfile -x
+  669  seinfo -dir -x
+  670  seinfo -cdir -x
+  671  seinfo -cblk_file -x
+  672  seinfo -clnk_file -x
+  673  seinfo -cfifo_file -x
+  674  seinfo -csock_file -x
+  675  seinfo -cfilesystem -x
+  676  grep 'httpd_.*_t' /etc/selinux/targeted/contexts/files/file_contexts
+  677  semanage fcontext -l
+  679  sudo semanage fcontext -l
+  680  sudo sesearch --allow --source passwd_t --target shadow_t --class file
+  682  sudo sesearch --allow --source passwd_t --target shadow_t --class file
+  683  sudo sesearch -A -s passwd_t -t passwd_exec_t -c file
+  684  sudo sesearch --allow --source passwd_t --target shadow_t --class file
+  685  sudo sesearch -A -s passwd_t -t passwd_exec_t -c file
+  686  sudo sesearch -A -s unconfined_t -t passwd_exec_t -c file
+  687  sudo sesearch -A -s unconfined_t -t passwd_t -c process
+  688  sudo sesearch --type_trans -s unconfined_t -t passwd_exec_t
+  689  sudo ausearch -m avc -ts recent
+  690  history > ~/Documents/OSS_Mephi/lab12/history.txt

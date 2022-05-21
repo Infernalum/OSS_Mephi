@@ -1,0 +1,65 @@
+  426  ps xaf
+  427  ps xawf -eo pid,user,cgroup,args
+  428  systemd-cgls
+  429  ls -l /usr/lib/systemd/system/
+  431  ls -l /run/systemd/system/
+  432  ls -l /etc/systemd/system/
+  433  systemctl -t help
+  434  systemctl status
+  435  systemctl --type=service
+  437  systemctl status auditd.service
+  438  systemctl is-active auditd.service
+  439  systemctl is-enabled auditd.service
+  440  systemctl list-dependencies --after auditd.service 
+  441  systemctl list-dependencies --before auditd.service
+  442  systemctl list-units --type=service
+  443  systemctl list-units --type=service --all
+  444  systemctl list-units --type=socket --all 
+  445  systemctl list-unit-files --type=service
+  446  systemctl --failed --type=service
+  447  systemctl enable httpd.service
+  448  systemctl status httpd.service 
+  449  systemctl start httpd.service 
+  450  systemctl status httpd.service 
+  451  systemctl disable httpd.service
+  452  systemctl mask httpd.service
+  453  systemctl status httpd.service 
+  454  systemctl start httpd.service
+  455  systemctl unmask httpd.service
+  456  systemctl list-units --type=target
+  457  systemctl list-units --type=target --all
+  568  systemctl get-default
+  459  ls -l /etc/systemd/system/default.target
+  460  systemctl set-default multi-user.target
+  461  systemctl isolate multi-user.target
+  462  systemctl --no-wall rescue
+  463  systemctl --no-wall emergency
+  464  history > ./Documents/OSS_Mephi/1.txt
+  476  systemctl poweroff
+  477  systemctl halt
+  478  systemctl --no-wall poweroff
+  480  shutdown --poweroff 17:30
+  481  shutdown --halt 5
+  482  shutdown -c
+  483  systemctl --no-wall reboot
+  484  systemctl suspend
+  485  systemctl hibernate
+  486  hostnamectl 
+  487  timedatectl 
+  488  localectl
+  489  loginctl
+  490  loginctl session-status 1
+  491  loginctl show-user Infernal
+  494  touch mephi.service
+  495  cat mephi.service 
+  496  ls -lZ mephi.service
+  497  journalctl -b
+  498  ausearch -m avc -ts recent
+  499  systemctl start mephi.service
+  500  journalctl -u mephi.service 
+  501  cat mephi.path
+  503  systemctl enable mephi.path
+  504  systemctl start mephi.path 
+  505  touch /tmp/mephi.file
+  506  journalctl -f -u mephi
+  507  history > ./Documents/OSS_Mephi/lab9/history.txt
